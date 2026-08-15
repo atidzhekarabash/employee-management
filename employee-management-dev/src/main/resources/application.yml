@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: employee-management
+  jpa:
+    hibernate:
+      ddlAuto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  messages:
+    basename: messages
+  datasource:
+    # TODO extract to env variables
+    url: jdbc:mysql://localhost:3306/employee_management
+    username: root
+    password: Qwer1324#
+  output:
+    ansi:
+      enabled: always
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: trace
+server:
+  servlet:
+    context-path: /api/v1
